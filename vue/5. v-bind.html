@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue指令之v-bind示例</title>
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:title="title">Hello world</div>
+    <div v-bind:class="{ active: isActive }" style="width: 100px;height: 100px;"></div>
+    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }" style="width: 100px;height: 100px;">测试</div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello world',
+            isActive: true,
+            activeColor: 'blue',
+            fontSize: 30
+        }
+    })
+</script>
+<style>
+    .active {background-color: red;}
+</style>
+</body>
+</html>
