@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue修饰符之prevent示例</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- 使用 .prevent 阻止默认行为 -->
+    <a href="http://www.baidu.com" @click.prevent="linkHandler">百度</a>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            linkHandler: function() {
+                console.log("触发了链接的点击事件");
+            },
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue修饰符之self示例</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- 使用 .self 实现只有点击当前元素才会触发事件 -->
+    <div @click.self="divHandler" style="height: 300px;border: 5px solid #eee">
+        <button @click="btnHandler">戳它</button>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            divHandler: function() {
+                console.log("触发了div的点击事件");
+            },
+            btnHandler: function() {
+                console.log("触发了btn的点击事件");
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue修饰符之stop示例</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--使用 .stop 阻止冒泡 -->
+    <div @click="divHandler" style="height: 300px;border: 5px solid #eee">
+        <button @click.stop="btnHandler">戳它</button>
+    </div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            divHandler: function() {
+                console.log("触发了div的点击事件");
+            },
+            btnHandler: function() {
+                console.log("触发了btn的点击事件");
+            }
+        }
+    })
+</script>
+</body>
+</html>

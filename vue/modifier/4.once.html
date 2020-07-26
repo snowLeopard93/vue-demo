@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue修饰符之once示例</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- 使用 .once 实现事件只触发一次 -->
+    <a href="http://www.baidu.com" @click.prevent.once="linkHandler">百度</a>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            linkHandler: function() {
+                console.log("触发了链接的点击事件");
+            },
+        }
+    })
+</script>
+</body>
+</html>
