@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性示例2</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="valueA"/>
+    <label>+</label>
+    <input type="text" v-model="valueB"/>
+    <label>sum is：{{getSumValue}}</label>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            valueA: 2,
+            valueB: 3,
+            sumValue: 5
+        },
+        computed: {
+            sumValue: function() {
+                return Number.parseFloat(this.valueA) + Number.parseFloat(this.valueB);
+            }
+        }
+    })
+</script>
+</body>
+</html>
