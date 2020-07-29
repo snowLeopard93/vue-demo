@@ -7,11 +7,11 @@ vue学习过程中的示例代码，持续更新中~~
 
 **1. Vue简单示例：** 
 
-（1）v-if、v-show、v-for、v-model、v-bind、v-on、v-html等常用指令；
+（1）v-if、v-show、v-for、v-model、v-bind、v-on、v-html等常用指令；（basicDirectives目录）
 
-（2）修饰符；
+（2）修饰符；（modifier目录）
 
-（3）计算属性和侦听属性；
+（3）计算属性和侦听属性；（basic目录）
 
 **2. Vue-cli简单示例**
 
