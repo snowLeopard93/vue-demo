@@ -1,6 +1,8 @@
 # vue-demo
 vue学习过程中的示例代码，持续更新中~~
 
+了解更多Vue的相关知识，戳[Vue](https://github.com/snowLeopard93/blog/tree/master/study/guide/Vue)
+
 ## 目录：
 
 ### 内容介绍
