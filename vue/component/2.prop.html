@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue组件基础示例3</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <blog-post v-for="item in list"
+               v-bind:key="item.id"
+               v-bind:title="item.title">
+    </blog-post>
+</div>
+<script>
+    Vue.component('blog-post', {
+        props: ['title'],
+        template: '<h3>{{ title }}</h3>'
+    });
+    new Vue({
+        el: '#app',
+        data: {
+            list: [
+                { id: 1, title: 'My journey with Vue' },
+                { id: 2, title: 'Blogging with Vue' },
+                { id: 3, title: 'Why Vue is so fun' }
+            ]
+        }
+    })
+</script>
+</body>
+</html>
