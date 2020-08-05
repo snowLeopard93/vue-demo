@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>侦听属性示例1</title>
+    <link rel="stylesheet" href="../lib/element-ui-2.13.2/css/index.css">
     <script src="../lib/vue.js"></script>
+    <script src="../lib/element-ui-2.13.2/js/index.js"></script>
 </head>
 <body>
 <div id="app">
-    <input type="text" v-model="valueA"/>
-    <label>+</label>
-    <input type="text" v-model="valueB"/>
-    <label>sum is：{{sumValue}}</label>
+    <el-row gutter="20" justify="center">
+        <el-col :span="6">
+            <el-col :span="6">
+                <el-input v-model="valueA"></el-input>
+            </el-col>
+            <el-col :span="4">
+                <div style="height: 40px;line-height: 40px;text-align: center;">+</div>
+            </el-col>
+            <el-col :span="6">
+                <el-input v-model="valueB"></el-input>
+            </el-col>
+        </el-col>
+    </el-row>
+    <el-row justify="start">
+        <el-col :span="6">
+            <div style="height: 40px;line-height: 40px;text-align: center;">sum is：{{sumValue}}</div>
+        </el-col>
+    </el-row>
 </div>
 <script>
     new Vue({
