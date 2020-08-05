@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element示例1</title>
+    <link rel="stylesheet" href="../lib/element-ui-2.13.2/css/index.css">
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/element-ui-2.13.2/js/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-row justify="center">
+        <el-col :span="3">
+            <el-input v-model="searchCode" placeholder="请输入工号"></el-input>
+        </el-col>
+        <el-col :span="3" style="margin-left: 10px;">
+            <el-input v-model="searchName" placeholder="请输入姓名"></el-input>
+        </el-col>
+        <el-col :span="1" style="margin-left: 10px;">
+            <el-button @click="searchBtnClick()">查询</el-button>
+        </el-col>
+        <el-col :span="1" style="margin-left: 10px;">
+            <el-button @click="resetBtnClick()">重置</el-button>
+        </el-col>
+    </el-row>
+    <el-table :data="userData" stripe="true"
+              style="width: 100%">
+        <el-table-column
+                prop="code"
+                label="工号"
+                width="480">
+        </el-table-column>
+        <el-table-column
+                prop="name"
+                label="姓名"
+                width="480">
+        </el-table-column>
+        <el-table-column
+                prop="age"
+                label="年龄"
+                width="480">
+        </el-table-column>
+        <el-table-column
+                prop="address"
+                label="籍贯"
+                width="450">
+        </el-table-column>
+    </el-table>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            searchCode: "",
+            searchName: "",
+            originData: [
+                {"code": "001", "name": "刘二", "age": 22, "address": '北京市'},
+                {"code": "002", "name": "张三", "age": 23, "address": '天津市'},
+                {"code": "003", "name": "李四", "age": 34, "address": '上海市'},
+                {"code": "004", "name": "王五", "age": 25, "address": '重庆市'},
+                {"code": "005", "name": "林森", "age": 26, "address": '厦门市'},
+                {"code": "006", "name": "石磊", "age": 27, "address": '广州市'}
+            ],
+            userData: [
+                {"code": "001", "name": "刘二", "age": 22, "address": '北京市'},
+                {"code": "002", "name": "张三", "age": 23, "address": '天津市'},
+                {"code": "003", "name": "李四", "age": 34, "address": '上海市'},
+                {"code": "004", "name": "王五", "age": 25, "address": '重庆市'},
+                {"code": "005", "name": "林森", "age": 26, "address": '厦门市'},
+                {"code": "006", "name": "石磊", "age": 27, "address": '广州市'}
+            ]
+        },
+        watch: {
+            searchCode: function() {
+                let userData = [];
+                this.originData.forEach((item, index) => {
+                    if(this.searchCode.trim() !== "" || this.searchName.trim() !== "") {
+                        if(this.searchCode.trim() !== "" && item.code.includes(this.searchCode)) {
+                            userData.push(item);
+                        }
+                        if(this.searchName.trim() !== "" && item.name.includes(this.searchName)) {
+                            userData.push(item);
+                        }
+                    } else {
+                        userData.push(item);
+                    }
+                });
+                this.userData = userData;
+            },
+            searchName: function() {
+                let userData = [];
+                this.originData.forEach((item, index) => {
+                    if(this.searchCode.trim() !== "" || this.searchName.trim() !== "") {
+                        if(this.searchCode.trim() !== "" && item.code.includes(this.searchCode)) {
+                            userData.push(item);
+                        }
+                        if(this.searchName.trim() !== "" && item.name.includes(this.searchName)) {
+                            userData.push(item);
+                        }
+                    } else {
+                        userData.push(item);
+                    }
+                });
+                this.userData = userData;
+            }
+        },
+        methods: {
+            searchBtnClick: function() {
+                let userData = [];
+                this.originData.forEach((item, index) => {
+                    if(this.searchCode.trim() !== "" || this.searchName.trim() !== "") {
+                        if(this.searchCode.trim() !== "" && item.code.includes(this.searchCode)) {
+                            userData.push(item);
+                        }
+                        if(this.searchName.trim() !== "" && item.name.includes(this.searchName)) {
+                            userData.push(item);
+                        }
+                    } else {
+                        userData.push(item);
+                    }
+                });
+                this.userData = userData;
+            },
+            resetBtnClick: function() {
+                this.searchCode = "";
+                this.searchName = "";
+                // let userData = [];
+                // this.originData.forEach((item, index) => {
+                //     if(this.searchCode.trim() !== "" || this.searchName.trim() !== "") {
+                //         if(this.searchCode.trim() !== "" && item.code.includes(this.searchCode)) {
+                //             userData.push(item);
+                //         }
+                //         if(this.searchName.trim() !== "" && item.name.includes(this.searchName)) {
+                //             userData.push(item);
+                //         }
+                //     } else {
+                //         userData.push(item);
+                //     }
+                // });
+                // this.userData = userData;
+            }
+        }
+    })
+</script>
+</body>
+</html>
