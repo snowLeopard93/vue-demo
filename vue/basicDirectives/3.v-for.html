@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue指令之v-for示例</title>
+    <link rel="stylesheet" href="../lib/element-ui-2.13.2/css/index.css">
     <script src="../lib/vue.js"></script>
+    <script src="../lib/element-ui-2.13.2/js/index.js"></script>
 </head>
+<style>
+    .text {
+        font-size: 14px;
+    }
+
+    .item {
+        margin-bottom: 18px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: "";
+    }
+    .clearfix:after {
+        clear: both
+    }
+
+    .box-card {
+        width: 480px;
+    }
+</style>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="item in items" :key="item.id">
+    <el-card class="box-card">
+        <div slot="header" class="clearfix">
+            <span>商品列表</span>
+        </div>
+        <div v-for="item in items" :key="item.id" class="text item">
             {{item.name}} --- {{item.value}}
-        </li>
-    </ul>
+        </div>
+    </el-card>
 </div>
 <script>
     new Vue({
