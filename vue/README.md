@@ -28,8 +28,9 @@
 
 **1.6** vue+element示例；（vue+element目录）
 
-**2. Vue-cli简单示例**
+**1.7** router目录
 
+**2. Vue-cli简单示例**
 
 **学习网址：**
 
