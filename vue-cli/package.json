@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "node-forge": "^0.10.0",
+    "selfsigned": "^1.10.8",
     "vue": "^2.6.11"
   },
   "devDependencies": {
