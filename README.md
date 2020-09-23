@@ -5,6 +5,8 @@ vue学习过程中的示例代码，持续更新中~~
 
 ## 二、vue-cli
 
+### 1、echart（vue-echart-demo）
+
 ## 三、vuex
 
 ### 1、计数器（vuex-counter-demo）
