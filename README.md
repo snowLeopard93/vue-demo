@@ -5,11 +5,11 @@ vue学习过程中的示例代码，持续更新中~~
 
 ## 二、vue-cli
 
-### 1、echart（vue-echart-demo）
+### 1、[echart（vue-echart-demo）](https://github.com/snowLeopard93/vue-demo/tree/master/vue-cli/vue-echart-demo)
 
 ## 三、vuex
 
-### 1、计数器（vuex-counter-demo）
+### 1、[计数器（vuex-counter-demo）](https://github.com/snowLeopard93/vue-demo/tree/master/vuex/vuex-counter-demo)
 
 了解更多Vue的相关知识，戳[vue](https://github.com/snowLeopard93/blog/tree/master/study/guide/Vue)
 
